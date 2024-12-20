@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { useDropzone, FileRejection } from 'react-dropzone';
 import 'tailwindcss/tailwind.css';
-import { NavigationMenuDemo } from "@/components/navbar"
 
 const PaperworkPage: React.FC = () => {
     const [files, setFiles] = useState<File[]>([]);
@@ -48,11 +47,10 @@ const PaperworkPage: React.FC = () => {
     };
 
     return (
-        
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
             <div
                 {...getRootProps()}
-                className="w-3/4 p-6 border-2 border-dashed border-gray-400 rounded-lg bg-white cursor-pointer"
+                className="w-full max-w-lg p-6 border-2 border-dashed border-gray-400 rounded-lg bg-white cursor-pointer"
             >
                 <input {...getInputProps()} />
                 <p className="text-center text-gray-600">
@@ -62,12 +60,12 @@ const PaperworkPage: React.FC = () => {
                     Supported formats: .docx, .xlsx, .pdf (Max size: 5MB)
                 </p>
             </div>
-            <div className="mt-4 w-3/4">
+            <div className="mt-4 w-full max-w-lg">
                 <h2 className="text-lg font-semibold mb-2">Uploaded Files:</h2>
                 <div className="flex justify-between mb-2">
-                    <button onClick={() => sortFiles('name')} className="px-4 py-2 bg-blue-500 text-white rounded">Sort by Name</button>
-                    <button onClick={() => sortFiles('size')} className="px-4 py-2 bg-blue-500 text-white rounded">Sort by Size</button>
-                    <button onClick={() => sortFiles('date')} className="px-4 py-2 bg-blue-500 text-white rounded">Sort by Date</button>
+                    <button onClick={() => sortFiles('name')} className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:from-blue-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Sort by Name</button>
+                    <button onClick={() => sortFiles('size')} className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:from-blue-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Sort by Size</button>
+                    <button onClick={() => sortFiles('date')} className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:from-blue-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Sort by Date</button>
                 </div>
                 <ul className="list-disc list-inside">
                     {files.map((file, index) => (

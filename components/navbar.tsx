@@ -78,10 +78,10 @@ export function NavigationMenuDemo() {
           <ListItem href="/paperwork" title="Paperwork">
           Upload and manage your business documents.
           </ListItem>
-          <ListItem href="/docs/installation" title="Start Asking Questions">
+          <ListItem href="/chat" title="Start Asking Questions">
           Use our AI to answer your questions pertaining to your business material.
           </ListItem>
-          <ListItem href="/docs/primitives/typography" title="Saved Prompts">
+          <ListItem href="/prompts" title="Saved Prompts">
           Store your commonly used questions here for easy access.
           </ListItem>
         </ul>
