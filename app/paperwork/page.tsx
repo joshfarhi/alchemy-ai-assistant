@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useDropzone, FileRejection } from 'react-dropzone';
 import 'tailwindcss/tailwind.css';
+import { NavigationMenuDemo } from "@/components/navbar"
 
 const PaperworkPage: React.FC = () => {
     const [files, setFiles] = useState<File[]>([]);
@@ -47,6 +48,7 @@ const PaperworkPage: React.FC = () => {
     };
 
     return (
+        
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
             <div
                 {...getRootProps()}
