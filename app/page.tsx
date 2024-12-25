@@ -11,31 +11,17 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
 import { NavigationMenuDemo } from "@/components/navbar"
+import { WavyBackground } from "@/components/ui/wavy-background"
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="flex flex-col items-center">
-        <Image
-        src="/images/robot.png"
-        alt="Robot"
-        width={200}
-        height={200}
-        />
-      </div>
-      <h1 className="text-4xl md:text-6xl font-bold text-center">Welcome to Alchemy AI</h1>
-      <p className="text-base md:text-lg mt-4 text-center">
-        Alchemy AI is a virtual assistant that can help you with anything you need.
+    <WavyBackground className="max-w-4xl mx-auto pb-40">
+      <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
+        alchemy.ai
       </p>
-      <button
-        className="mt-6 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-lg transform transition-transform hover:scale-105 hover:from-blue-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-        onClick={() => window.location.href = '/paperwork'}
-      >
-        Get Started Now
-      </button>
-      </div>
-    </div>
-
-  )
-  }
+      <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
+        Leverage the power of canvas to create a beautiful hero section
+      </p>
+    </WavyBackground>
+  );
+}
